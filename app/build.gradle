@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.retrnull.garnet'
+    namespace 'com.vitorpamplona.amethyst'
     compileSdk 34
 
     defaultConfig {
@@ -84,12 +84,12 @@ android {
             'zh-rSG',
             'zh-rTW'
         ]
-        // externalNativeBuild {
-        //     cmake {
-        //         cppFlags "-std=c++11"
-        //         arguments "-DANDROID_STL=c++_shared"
-        //     }
-        // }
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
     }
 
     buildTypes {
@@ -133,11 +133,11 @@ android {
         }
     }
 
-    // externalNativeBuild {
-    //     cmake {
-    //         path "CMakeLists.txt"
-    //     }
-    // }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
 
     splits {
         abi {
